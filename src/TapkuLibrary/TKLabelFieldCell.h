@@ -36,6 +36,7 @@
 
 /** A `UILabel` field. */
 @property (strong, nonatomic) UILabel *field;
+@property (strong, nonatomic) UIColor *fieldColor;
 
 @end
 

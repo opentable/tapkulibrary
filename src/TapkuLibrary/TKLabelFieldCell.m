@@ -39,6 +39,8 @@
 	
 	_field = [[UILabel alloc] initWithFrame:CGRectZero];
     _field.font = [UIFont boldSystemFontOfSize:16.0];
+	_fieldColor = [UIColor lightGrayColor];
+	
 	_field.backgroundColor = [UIColor clearColor];
 
 	[self.contentView addSubview:_field];
@@ -61,11 +63,11 @@
 }
 - (void) setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-	_field.textColor = selected ? [UIColor whiteColor] : [UIColor blackColor];
+	_field.textColor = selected ? [UIColor whiteColor] : _fieldColor;
 }
 - (void) setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
 	[super setHighlighted:highlighted animated:animated];
-	_field.textColor = highlighted ? [UIColor whiteColor] : [UIColor blackColor];
+	_field.textColor = highlighted ? [UIColor whiteColor] : _fieldColor;
 }
 
 
